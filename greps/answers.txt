@@ -1,37 +1,70 @@
 # Part 1
-### a)
+### a) show the grep statement you used to catch each pokemon.
+beedrill: ggrep "^be" filescan_00.1
+blastoise: ggrep "^bl" filescan_00.1
+bulbasaur: ggrep "bulb" filescan_00.1
+butterfree: ggrep "butt" filescan_00.1
+charizard: ggrep "ard$" filescan_00.2
+charmander: ggrep "der$" filescan_00.2
+charmeleon: ggrep "leon$" filescan_00.2
+ivysaur: ggrep "ivy" filescan_00.3
+jigglypuff: ggrep "jigg" filescan_00.3
+meowth: ggrep "meow" filescan_00.3
+pikachu: ggrep "pika" filescan_00.3
+psyduck: ggrep "^p" filescan_00.4
+squirtle: ggrep "sq" filescan_00.4
+venusaur: ggrep "ven" filescan_00.4
+wortortle: ggrep "wart" filescan_00.4
 
 
+### b) Save each pokemon as a separate `.txt` file in the `captured` directory.
+beedrill: ggrep "^be" filescan_00.1 > beedrill.txt
+blastoise: ggrep "^bl" filescan_00.1 > blastoise.txt
+bulbasaur: ggrep "bulb" filescan_00.1 > bulbasaur.txt
+butterfree: ggrep "butt" filescan_00.1 > butterfree.txt
+charizard: ggrep "ard$" filescan_00.2 > charizard.txt
+charmander: ggrep "der$" filescan_00.2 > charmander.txt
+charmeleon: ggrep "leon$" filescan_00.2 > charmeleon.txt
+ivysaur: ggrep "ivy" filescan_00.3 > ivysaur.txt
+jigglypuff: ggrep "jigg" filescan_00.3 > jigglypuff.txt
+meowth: ggrep "meow" filescan_00.3 > meowth.txt
+pikachu: ggrep "pika" filescan_00.3 > pikachu.txt
+psyduck: ggrep "^p" filescan_00.4 > psyduck.txt
+squirtle: ggrep "sq" filescan_00.4 > squirtle.txt
+venusaur: ggrep "ven" filescan_00.4 > venusaur.txt
+wortortle: ggrep "wart" filescan_00.4 > wartortle.txt
 
 
-### b)
-
-
-
-### c)
-
-
-
-
-
-
-
-
-
-
-
+### c) In which section of the forest (which scan file) did you find each pokemon?
+beedrill: filescan_00.1
+blastoise: filescan_00.1
+bulbasaur: filescan_00.1
+butterfree: filescan_00.1
+charizard: filescan_00.2
+charmander: filescan_00.2
+charmeleon: filescan_00.2
+ivysaur: filescan_00.2
+jigglypuff: filescan_00.3
+meowth: filescan_00.3
+pikachu: filescan_00.3
+psyduck: filescan_00.4
+squirtle: filescan_00.4
+venusaur: filescan_00.4
+wartortle: filescan_00.4
 
 
 # Part 2
-### a)
+### a) How many pokemon are there? Show your grep that you used to get to that number.
+answer: 15
+in the captured directory: ls | ggrep -v "instruction.txt" | wc -l
+- list the files in the captured directory, returns lines excluding instructions.txt, count the number of lines
 
 
-
-
-
-
-### b)
-
+### b) Who are the three biggest pokemon? (number of lines) Show the grep that you used to get to the result.
+answer: charizard, beedrill, pikachu
+in the captured directory: ggrep "" -r -c
+- searches through the captured directory, shows number of lines in each file that match empty pattern,
+which will just return the number of lines
 
 
 
